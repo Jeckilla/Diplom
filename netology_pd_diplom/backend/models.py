@@ -1,6 +1,7 @@
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.validators import UnicodeUsernameValidator
+from django.core.validators import FileExtensionValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django_rest_passwordreset.tokens import get_token_generator
@@ -161,7 +162,7 @@ class ProductInfo(models.Model):
     quantity = models.PositiveIntegerField(verbose_name="Количество")
     price = models.PositiveIntegerField(verbose_name="Цена")
     price_rrc = models.PositiveIntegerField(verbose_name="Рекомендуемая розничная цена")
-    price_info = models.FileField(upload_to="products/price/%Y/%m/%d")
+    price_info = models.FileField(upload_to="products/price/%Y/%m/%d", validators=[FileExtensionValidator(allowed_extensions=['xls', 'xlsx'])])
 
     class Meta:
         verbose_name = 'Информация о продукте'

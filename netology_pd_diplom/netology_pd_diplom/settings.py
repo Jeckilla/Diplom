@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'diplom',
         'USER': 'jeckilla',
-        'PASSWORD': '**************',
+        'PASSWORD': 'lenochka',
         'PORT': '5432',
         'HOST': '127.0.0.1',
     }
@@ -136,7 +136,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mail.ru'
 
 EMAIL_HOST_USER = 'jenbir1989@yandex.ru'
-EMAIL_HOST_PASSWORD = '*********'
+EMAIL_HOST_PASSWORD = 'lenochkater'
 EMAIL_PORT = '465'
 EMAIL_USE_SSL = True
 SERVER_EMAIL = EMAIL_HOST_USER
@@ -171,5 +171,6 @@ REST_FRAMEWORK = {
 
 }
 
+# AUTHENTICATION_BACKENDS = 'django.contrib.auth.backends.AllowAllUsersModelBackend'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
