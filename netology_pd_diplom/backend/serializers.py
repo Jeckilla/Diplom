@@ -17,7 +17,7 @@ class ContactSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'email', 'company', 'position', 'username', 'is_active', )
+        fields = ('id', 'email', 'company', 'position', 'username', 'is_active', 'type', )
         read_only_fields = ('id',)
 
 
