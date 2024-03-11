@@ -26,7 +26,7 @@ from .permissions import IsOwnerOrReadOnly
 from .serializers import UserSerializer, CategorySerializer, ShopSerializer, ProductInfoSerializer, \
     OrderItemSerializer, OrderSerializer, ContactSerializer
 from .signals import new_user_registered, new_order
-from .tasks import send_email
+
 
 
 class RegisterAccount(APIView):
